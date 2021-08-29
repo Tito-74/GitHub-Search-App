@@ -1,7 +1,7 @@
 export class Repos {
-    username:any;
-    personalName:any;
-    location:any;
+    RepoName:any;
+    repo_url:any;
+    repo_description:any;
     constructor(){
 
     }
