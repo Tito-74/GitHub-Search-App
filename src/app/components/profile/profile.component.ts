@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ProfileDataService} from '../../services/profile-data.service'
+import {ProfileDataService} from '../../services/profile-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -11,7 +12,7 @@ export class ProfileComponent implements OnInit {
 user:any
 username:any;
 repos:any;
-  constructor(private profiledataservice:ProfileDataService) { 
+  constructor(private profiledataservice:ProfileDataService, private router:Router) { 
     
    
   }
@@ -27,6 +28,9 @@ repos:any;
       console.log(data)
       return this.repos = data;
     });
+  }
+  goToUrl(username:any){
+    this.router.navigate(['/profile',username])
   }
 
   ngOnInit(): void {
