@@ -1,0 +1,47 @@
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+input{
+    max-width: 600px;
+    width: 100%;
+    align-items: center;
+}
+/* .row{
+    display: flex;
+    flex-direction: column;
+}
+.picture{
+    margin-top: 3rem; */
+    /* justify-content: center; */
+    /* width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    /* text-align: center; */
+    
+/* }
+.stats{ */
+    /* text-align: center; */
+    /* padding: 1rem; */
+    /* margin: 1rem;
+}
+.stats span{
+    margin: 0.5rem;
+
+} */
+img{
+    
+    margin-top: 1rem;
+    border-radius: 50%;
+
+}
+
+
+
+/* new styling */
+.profile-info span{
+    margin: 0.5rem;
+}
+.repos h5 a{
+   padding: 0.5rem 0.5rem;
+   text-decoration: none;
+   color: black;
+}

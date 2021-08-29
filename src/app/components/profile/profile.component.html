@@ -1,0 +1,123 @@
+<div class="container"> 
+<div class="content">
+    <form class="form-group d-flex justify-content-center mt-3">
+        <input type="text" class="form-control" [(ngModel)]='username' name='username' (keyup)='getUser()' placeholder="Input Search">
+        <!-- <button class="btn btn-sm btn-info" (click)='getRepository()'>View Repositories</button> -->
+    </form>
+    <div class="row justify-content-around">
+        <div class="col-md-4 profile">
+            <div class=" profile-picture ">
+                <img class="github-avatar img-thumbnail" src="{{user.avatar_url}}">
+            </div>
+            <div class="profile-info">
+                <p *ngIf='user.name'><strong>Name:</strong> {{user.name}} ({{user.login}})</p>
+                <p *ngIf='user.bio'><strong>Proffession:</strong> {{user.bio}}
+                </p>
+                <p *ngIf='user.email'><strong>Email:</strong>{{user.email}}</p>
+                <p *ngIf='user.created_at'><strong>Created on:</strong>{{user.created_at|date}}</p>
+                <!-- <p><strong>Created on:</strong>{{user.created_at|date}}</p> -->
+                <h4 *ngIf='user.hireable'><strong>Available For hire</strong></h4>
+                <p *ngIf='user.location'><strong>Location:</strong>{{user.location}}</p>
+                <!-- <div *ngIf='user.location' class="d-flex flex-row">
+                    <p><strong>Location:</strong>{{user.location}}</p>
+
+                </div> -->
+                
+                <!-- <span>{{user.location}}</span> -->
+                <h6>
+                    <span class="label label-primary">{{user.public_repos}} Repos</span>
+                    <span class="label label-success">{{user.followers}} Followers</span>
+                    <span class="label label-info">{{user.following}} Following</span>
+                </h6>
+            </div>
+
+        </div>
+        <div class="col-md-6 repository"
+        *ngIf="user.login" >
+            <button class="btn btn-lg btn-info" (click)='getRepository()'>View Repositories</button>
+            <hr>
+            <div class="">
+                <div *ngFor="let repo of repos">
+                 <ng-container>
+                 <div class="row">
+                   <div class="col-md-9 repos">
+                     <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+                     <p>{{repo.description}}</p>
+                     <h5><a href="{{repo.homepage}}" class="view bg-info" target="_blank">View Page</a></h5>
+                     <!-- <button *ngIf="repo.homepage"><a href="{{repo.homepage}}" target="_blank"></a>View project website</button> -->
+                     <!-- <a href={{}}></a> -->
+                   </div>
+                   <div class="col-md-3">
+                     <span class="label label-primary">{{repo.forks}} Forks</span>
+                   </div>
+                 </div>
+               </ng-container>
+                 <hr />
+               </div>
+             </div> 
+           
+        </div>
+<!-- 
+        <div class="col-md-6 repository">
+           <div class="repos">
+                <div *ngFor="let repo of repos">
+                <ng-container>
+                <div class="row">
+                <div class="col-md-9">
+                    <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+                    <p>{{repo.description}}</p>
+                </div>
+                <div class="col-md-3">
+                    <span class="label label-primary">{{repo.forks}} Forks</span>
+                </div>
+                </div>
+            </ng-container>
+                <hr />
+            </div>
+            </div>
+
+        </div> -->
+    </div>
+</div>
+
+<!-- <div class="content-data">
+    <div class="row-image"> -->
+        <!-- col-md-4 -->
+        <!-- <div class=" picture align-items-center ">
+            <img class="github-avatar img-thumbnail" src="{{user.avatar_url}}">
+        </div> -->
+          <!-- <div class=""> -->
+            <!-- <div class="stats">
+             <span class="label label-default">{{user.public_repos}} Public Repos</span> 
+              <span class="label label-primary">{{user.public_gists}} Public Gists</span>
+              <span class="label label-success">{{user.followers}} Followers</span>
+              <span class="label label-info">{{user.following}} Following</span>
+            </div>
+            <br>
+            <div class="Profile">
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Username: </strong>{{user.login}}</li>
+              <li class="list-group-item"><strong>Joined: </strong>{{user.created_at|date}}</li>
+              <li class="list-group-item"><button target='_blank'(click)='getRepository()'>View Repository</button></li>
+            </ul>
+         </div>
+    </div>
+</div> -->
+</div>
+<!-- <div class="">
+    <div *ngFor="let repo of repos">
+     <ng-container>
+     <div class="row">
+       <div class="col-md-9">
+         <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+         <p>{{repo.description}}</p>
+       </div>
+       <div class="col-md-3">
+         <span class="label label-primary">{{repo.forks}} Forks</span>
+       </div>
+     </div>
+   </ng-container>
+     <hr />
+   </div>
+ </div> -->
+
