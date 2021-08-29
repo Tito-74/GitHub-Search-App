@@ -1,5 +1,8 @@
 export class Repos {
-    constructor(private projectName:string){
+    username:any;
+    personalName:any;
+    location:any;
+    constructor(){
 
     }
 }
