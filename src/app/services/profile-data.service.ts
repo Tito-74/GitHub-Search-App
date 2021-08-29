@@ -17,7 +17,7 @@ export class ProfileDataService {
 
   constructor(private http:HttpClient ) { 
     console.log("service is ready");
-    this.username = 'Tito-74';
+    // this.username = 'Tito-74';
     // this.repos ='Gif-App'
   }
   getProfile(username:any){
