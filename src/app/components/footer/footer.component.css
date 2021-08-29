@@ -1,5 +1,6 @@
 .footer{
     background-color: rgb(245, 244, 244);
+    height: 100px;
 }
 .footer ul{
     display: flex;

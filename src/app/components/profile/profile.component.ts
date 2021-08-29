@@ -29,9 +29,9 @@ repos:any;
       return this.repos = data;
     });
   }
-  goToUrl(username:any){
-    this.router.navigate(['/profile',username])
-  }
+  // goToUrl(username:any){
+  //   this.router.navigate(['/profile',username])
+  // }
 
   ngOnInit(): void {
   }
