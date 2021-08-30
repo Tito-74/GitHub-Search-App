@@ -8,11 +8,6 @@ const routes: Routes = [
   { path: 'repository', component: RepositoryComponent},
   { path: 'profile', component: ProfileComponent },
   { path: 'about', component: AboutComponent},
-  
-
-  
-  // { path: 'goals/:id', component: GoalDetailComponent },
-  // { path: '', redirectTo:"/profile", pathMatch:"full"}
 ];
 
 @NgModule({

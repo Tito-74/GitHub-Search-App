@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-// profile:any[]=[];
 user:any
 username:any;
 repos:any;

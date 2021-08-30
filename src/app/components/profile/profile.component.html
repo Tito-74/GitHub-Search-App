@@ -1,13 +1,8 @@
 <!-- <app-header></app-header> -->
 <div class="container"> 
-  
-<!-- <app-profile></app-profile> -->
-<!-- <app-repository></app-repository> -->
-
 <div class="content">
     <form class="form-group d-flex justify-content-center mt-3">
         <input type="text" class="form-control" [(ngModel)]='username' name='username' (keyup)='getUser()' placeholder="Input Search">
-        <!-- <button class="btn btn-sm btn-info" (click)='getRepository()'>View Repositories</button> -->
     </form>
     <div class="row justify-content-around">
         <div class="col-md-4 profile">
@@ -20,15 +15,8 @@
                 </p>
                 <p *ngIf='user.email'><strong>Email:</strong>{{user.email}}</p>
                 <p *ngIf='user.created_at'><strong>Created on:</strong>{{user.created_at|date}}</p>
-                <!-- <p><strong>Created on:</strong>{{user.created_at|date}}</p> -->
                 <h6 *ngIf='user.hireable'>Available For hire</h6>
                 <p *ngIf='user.location'><strong>Location:</strong>{{user.location}}</p>
-                <!-- <div *ngIf='user.location' class="d-flex flex-row">
-                    <p><strong>Location:</strong>{{user.location}}</p>
-
-                </div> -->
-                
-                <!-- <span>{{user.location}}</span> -->
                 <h6>
                     <span class="label label-primary">{{user.public_repos}} Repos</span>
                     <span class="label label-success">{{user.followers}} Followers</span>
@@ -64,5 +52,4 @@
     </div>
 </div>
 </div>
-<!-- <app-footer></app-footer> -->
 
