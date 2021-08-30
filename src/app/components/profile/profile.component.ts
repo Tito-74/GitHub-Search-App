@@ -21,7 +21,12 @@ repos:any;
       console.log(profile);
       return this.user = profile;
       
-    });
+    }
+    // ,
+    // (error)=>{
+    //   alert("please write the correct username")
+    // }
+    );
   }
   getRepository(){
     this.profiledataservice.getRepo(this.username).subscribe(data=>{

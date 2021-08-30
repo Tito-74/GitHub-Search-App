@@ -5,9 +5,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  { path: 'repository', component: RepositoryComponent},
   { path: 'profile', component: ProfileComponent },
   { path: 'about', component: AboutComponent},
-  { path: 'profile/:username', component: RepositoryComponent}
+  
 
   
   // { path: 'goals/:id', component: GoalDetailComponent },

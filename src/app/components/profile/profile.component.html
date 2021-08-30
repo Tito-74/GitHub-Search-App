@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <div class="container"> 
   
 <!-- <app-profile></app-profile> -->
@@ -37,9 +37,7 @@
             </div>
 
         </div>
-        <div class="col-md-6 repository"
-        *ngIf="user.login" >
-        <!-- <button class="btn btn-primary" (click)='goToUrl(user.username))'>View Details</button> -->
+        <div class="col-md-6 repository" *ngIf="user.login" >
             <button class="btn btn-lg btn-info" (click)='getRepository()'>View Repositories</button>
             <hr>
             <div class="">
@@ -50,8 +48,7 @@
                      <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
                      <p>{{repo.description}}</p>
                      <h5><a href="{{repo.homepage}}" class="view bg-info" target="_blank">View Page</a></h5>
-                     <!-- <button *ngIf="repo.homepage"><a href="{{repo.homepage}}" target="_blank"></a>View project website</button> -->
-                     <!-- <a href={{}}></a> -->
+                     <p><strong>Created on:</strong>{{repo.updated_at|date}}</p>
                    </div>
                    <div class="col-md-3">
                      <span class="label label-primary">{{repo.forks}} Forks</span>
@@ -63,68 +60,9 @@
              </div> 
            
         </div>
-<!-- 
-        <div class="col-md-6 repository">
-           <div class="repos">
-                <div *ngFor="let repo of repos">
-                <ng-container>
-                <div class="row">
-                <div class="col-md-9">
-                    <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
-                    <p>{{repo.description}}</p>
-                </div>
-                <div class="col-md-3">
-                    <span class="label label-primary">{{repo.forks}} Forks</span>
-                </div>
-                </div>
-            </ng-container>
-                <hr />
-            </div>
-            </div>
 
-        </div> -->
     </div>
 </div>
-
-<!-- <div class="content-data">
-    <div class="row-image"> -->
-        <!-- col-md-4 -->
-        <!-- <div class=" picture align-items-center ">
-            <img class="github-avatar img-thumbnail" src="{{user.avatar_url}}">
-        </div> -->
-          <!-- <div class=""> -->
-            <!-- <div class="stats">
-             <span class="label label-default">{{user.public_repos}} Public Repos</span> 
-              <span class="label label-primary">{{user.public_gists}} Public Gists</span>
-              <span class="label label-success">{{user.followers}} Followers</span>
-              <span class="label label-info">{{user.following}} Following</span>
-            </div>
-            <br>
-            <div class="Profile">
-            <ul class="list-group">
-              <li class="list-group-item"><strong>Username: </strong>{{user.login}}</li>
-              <li class="list-group-item"><strong>Joined: </strong>{{user.created_at|date}}</li>
-              <li class="list-group-item"><button target='_blank'(click)='getRepository()'>View Repository</button></li>
-            </ul>
-         </div>
-    </div>
-</div> -->
 </div>
-<app-footer></app-footer>
-<!-- <div class="">
-    <div *ngFor="let repo of repos">
-     <ng-container>
-     <div class="row">
-       <div class="col-md-9">
-         <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
-         <p>{{repo.description}}</p>
-       </div>
-       <div class="col-md-3">
-         <span class="label label-primary">{{repo.forks}} Forks</span>
-       </div>
-     </div>
-   </ng-container>
-     <hr />
-   </div>
- </div> -->
+<!-- <app-footer></app-footer> -->
 
