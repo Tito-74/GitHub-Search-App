@@ -36,7 +36,7 @@
                      <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
                      <p>{{repo.description}}</p>
                      <h5><a href="{{repo.homepage}}" class="view bg-info" target="_blank">View Page</a></h5>
-                     <p><strong>Created on:</strong>{{repo.updated_at|date}}</p>
+                     <p><strong>Created on:</strong>{{repo.updated_at|dateCount}}</p>
                    </div>
                    <div class="col-md-3">
                      <span class="label label-primary">{{repo.forks}} Forks</span>
