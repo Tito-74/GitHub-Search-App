@@ -1,4 +1,4 @@
-ul{
+/* ul{
     display:flex
 
 }
@@ -10,4 +10,20 @@ ul li{
 ul img{
     width: 300px;
 
+} */
+input{
+    max-width: 600px;
+    width: 100%;
+    align-items: center;
 }
+/* .content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+} */
+a{
+    text-decoration: none;
+}
+
+

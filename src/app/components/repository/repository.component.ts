@@ -9,23 +9,18 @@ import { Repos } from '../../classes/repos';
 })
 export class RepositoryComponent implements OnInit {
 // repos:Repos []=[];
-user:any
-repos:any;
-username:any;
-repo:any;
+
+repositories:any [] = [];
+username:any
+userReository:any;
 
   constructor(private profiledataservice:ProfileDataService) { 
-    // this.repos= new Repos("")
-    // this.profiledataservice.getRepo().subscribe(data=>{
-    //   console.log(data)
-      // let name = data.projectName;
-      // this.repos = name;
-    // });
+   
   }
-  getRepository(username:any){
-    this.profiledataservice.getRepo(this.username).subscribe(data=>{
-      console.log(data)
-      return this.repos = data;
+  getReposito(username:any){
+    this.profiledataservice.getRepositories(this.username).subscribe((data:any)=>{
+      console.log(data.items)
+      return this.repositories = data.items;
     });
   }
 

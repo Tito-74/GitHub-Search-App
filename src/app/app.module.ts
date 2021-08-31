@@ -13,6 +13,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { DateCountPipe } from './date-count.pipe';
+import { LandingComponent } from './components/landing/landing.component';
+// import { ContentsComponent } from './components/contents/contents.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DateCountPipe } from './date-count.pipe';
     HeaderComponent,
     FooterComponent,
     AboutComponent,
-    DateCountPipe
+    DateCountPipe,
+    LandingComponent,
+    // ContentsComponent
   ],
   imports: [
     BrowserModule,

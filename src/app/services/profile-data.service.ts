@@ -25,6 +25,12 @@ export class ProfileDataService {
     return this.http.get("https://api.github.com/users/"+ username + "/repos?access_token=" + environment.tokenKey)
     .pipe(((response: any) => response));
   }
+  getRepositories(repoName:any){
+    return this.http.get("https://api.github.com/search/repositories?q="+ repoName + "&?access_token=" + environment.tokenKey)
+    .pipe(((response: any) => response));
+
+    // https://api.github.com/search/repositories?q=<name>&?access_token=<token>
+  }
  
 
 }
