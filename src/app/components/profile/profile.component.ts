@@ -38,6 +38,8 @@ repos:any;
   // }
 
   ngOnInit(): void {
+    this.username = "Tito-74"
+    this. getUser()
   }
 
 }
